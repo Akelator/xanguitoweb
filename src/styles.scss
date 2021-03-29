@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  min-width: 1164px;
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  background-image: url("assets/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  overflow: hidden;
+  * {
+    box-sizing: border-box;
+  }
+}

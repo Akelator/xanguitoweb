@@ -1,0 +1,88 @@
+:host {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  pointer-events: none;
+  z-index: 1;
+}
+$xang-size-x: 540px;
+$xang-size-y: 108px;
+$aventura-size-x: 300px;
+$aventura-size-y: 60px;
+$player-size-x: 75px;
+$player-size-y: 75px;
+$factor: 1.5;
+.main-title {
+  position: relative;
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  filter: drop-shadow(0px 2px 10px rgba(0, 0, 0, 0.39));
+  &.xanguito {
+    width: calc(#{$xang-size-x} * #{$factor});
+    height: calc(#{$xang-size-y} * #{$factor});
+    background-image: url("/assets/titles/XANGUITO.png");
+  }
+  &.aventura {
+    margin-top: -50px;
+    width: calc(#{$aventura-size-x} * #{$factor});
+    height: calc(#{$aventura-size-y} * #{$factor});
+    background-image: url("/assets/titles/AVENTURA.png");
+  }
+  &.player {
+    pointer-events: all !important;
+    position: absolute;
+    top: 20px;
+    left: calc(50% - 540px);
+    width: calc(#{$player-size-x} * #{$factor});
+    height: calc(#{$player-size-y} * #{$factor});
+  }
+}
+.lang-selector {
+  position: absolute;
+  top: 20px;
+  right: calc(50% - 520px);
+  width: calc(#{$player-size-x} * #{$factor});
+  height: calc(#{$player-size-y} * #{$factor});
+}
+.load {
+  position: absolute;
+  top: -200px;
+  left: -200px;
+}
+
+.player {
+  &_1 {
+    background-image: url("/assets/player/player_1.png");
+  }
+  &_2 {
+    background-image: url("/assets/player/player_2.png");
+  }
+  &_3 {
+    background-image: url("/assets/player/player_3.png");
+  }
+  &_4 {
+    background-image: url("/assets/player/player_4.png");
+  }
+  &_5 {
+    background-image: url("/assets/player/player_5.png");
+  }
+  &_6 {
+    background-image: url("/assets/player/player_6.png");
+  }
+}
+.lang {
+  &_es {
+    background-image: url("/assets/lang/es.png");
+  }
+  &_en {
+    background-image: url("/assets/lang/en.png");
+  }
+  &_ca {
+    background-image: url("/assets/lang/ca.png");
+  }
+}

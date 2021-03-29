@@ -1,0 +1,15 @@
+<div class="demo-page">
+  <div class="demo-background"
+       [class.show]="isOpen"></div>
+  <div class="demo-content"
+       [class.show]="isOpen">
+    <div class="demo-close"
+         (click)="onCloseDemo()"></div>
+    <ng-container *ngIf="isOpen">
+      <iframe [src]="getDemoIframe()"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+    </ng-container>
+  </div>
+</div>
