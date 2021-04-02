@@ -34,6 +34,7 @@ $size-y: 728px;
   transition: 100ms;
 }
 .demo-close {
+  cursor: pointer;
   position: absolute;
   top: 0;
   right: 0;
@@ -64,13 +65,12 @@ $px0: 1px;
   &.show {
     pointer-events: all;
     opacity: 1;
-    cursor: pointer;
     transform: scale(1);
   }
   transition: 200ms;
 }
 iframe {
-  cursor: pointer;
+  cursor: none !important;
   width: 100%;
   height: 100%;
 }
