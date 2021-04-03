@@ -12,11 +12,14 @@ export class ContentComponent {
   translations = translations;
 
   @Output() openDemo = new EventEmitter<null>();
+  @Output() openScreenshot = new EventEmitter<number>();
   constructor(private langService: LangService) {}
   onOpenDemo(): void {
     this.openDemo.emit();
   }
-
+  onOpenScreeshot(index: number) {
+    this.openScreenshot.emit(index);
+  }
   get description(): string {
     return this.translations[this.lang].description;
   }

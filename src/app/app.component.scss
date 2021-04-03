@@ -1,5 +1,6 @@
 app-content.blurred,
-app-title.blurred {
-  filter: blur(20px);
+app-title.blurred,
+app-particles.blurred {
+  filter: blur(16px);
   transition: 100ms;
 }

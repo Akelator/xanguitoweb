@@ -12,6 +12,7 @@ body {
   display: flex;
   flex-flow: column nowrap;
   overflow: hidden;
+  user-select: none;
   * {
     box-sizing: border-box;
   }

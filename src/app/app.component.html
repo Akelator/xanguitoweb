@@ -1,6 +1,9 @@
+<app-particles [class.blurred]="windowIsOpen"></app-particles>
 <app-header></app-header>
-<app-title [class.blurred]="demoIsOpen"></app-title>
-<app-content (openDemo)="demoIsOpen = true"
-             [class.blurred]="demoIsOpen"></app-content>
-<app-demo [isOpen]="demoIsOpen"
-          (closeDemo)="demoIsOpen = false"></app-demo>
+<app-title [class.blurred]="windowIsOpen"></app-title>
+<app-content (openDemo)="windowIsOpen = true"
+             (openScreenshot)="onOpenScreenshot($event)"
+             [class.blurred]="windowIsOpen"></app-content>
+<app-window #window
+            [isOpen]="windowIsOpen"
+            (closeWindow)="windowIsOpen = false"></app-window>

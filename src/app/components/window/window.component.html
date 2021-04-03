@@ -1,0 +1,20 @@
+<div class="window-page">
+  <div class="window-background"
+       [class.show]="isOpen"></div>
+  <div class="window-content"
+       [class.show]="isOpen">
+    <div class="window-close"
+         (click)="onCloseWindow()"></div>
+    <ng-container *ngIf="validScreenshot; else demo;">
+      <img src="{{'/assets/screenshots/SCREENSHOT_0' + _screenshot + '.png'}}">
+    </ng-container>
+    <ng-template #demo>
+      <ng-container *ngIf="isOpen">
+        <iframe [src]="getDemoIframe()"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+      </ng-container>
+    </ng-template>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<ng-container *ngFor="let screenshot of screenshots">
+  <div class="screenshoot"
+       [ngClass]="(screenshot % 2 == 0) ? 'left' : 'right'"
+       (click)="onOpenScreenShot(screenshot)">
+    <img src="{{'/assets/screenshots/SCREENSHOT_0' + screenshot + '.png'}}">
+  </div>
+</ng-container>
