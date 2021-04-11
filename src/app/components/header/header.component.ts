@@ -9,7 +9,7 @@ export class HeaderComponent {
   @Input() set scroll(value: number) {
     this.move(value);
   }
-  private initPos: number = 420;
+  private initPos: number = 460;
   constructor(private el: ElementRef, private render: Renderer2) {}
   private move(value: number) {
     this.render.setStyle(

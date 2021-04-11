@@ -1,13 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
-body {
-  min-width: 1164px;
-  position: relative;
-  margin: 0px;
-  padding: 0px;
+
+html {
+  overflow: hidden;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
   background-image: url("assets/background.png");
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100%;
+  position: fixed;
+}
+body {
+  min-width: 1164px;
+  min-width: 1024px;
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  width: 100vw;
   height: 100vh;
   display: flex;
   flex-flow: column nowrap;

@@ -1,6 +1,7 @@
 $top: 0px;
 $padding-top: 332px;
 $size: 1100px;
+$size: 1060px;
 :host {
   width: 100%;
   min-width: $size;
@@ -24,7 +25,8 @@ app-youtube {
   filter: drop-shadow(0px 2px 10px rgba(0, 0, 0, 0.39));
 }
 .content-description {
-  margin-top: 16px;
+  margin-top: 4px;
+  margin-bottom: 4px;
   width: 720px;
   background-color: #ffffffab;
   display: block;
@@ -35,7 +37,6 @@ app-youtube {
   border-radius: 4px;
   filter: drop-shadow(0px 2px 10px rgba(0, 0, 0, 0.39));
   line-height: 1.5rem;
-  margin-bottom: 16px;
   color: rgb(71, 71, 71);
   font-weight: 800;
 }
