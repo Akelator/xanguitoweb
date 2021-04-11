@@ -8,8 +8,8 @@
   pointer-events: none;
   z-index: 1;
 }
-$xang-size-x: 540px;
-$xang-size-y: 108px;
+$xang-size-x: 640px; // 32
+$xang-size-y: 360px; // 18
 $aventura-size-x: 300px;
 $aventura-size-y: 60px;
 $player-size-x: 75px;
@@ -23,9 +23,10 @@ $factor: 1.5;
   image-rendering: pixelated;
   filter: drop-shadow(0px 2px 10px rgba(0, 0, 0, 0.39));
   &.xanguito {
-    width: calc(#{$xang-size-x} * #{$factor});
-    height: calc(#{$xang-size-y} * #{$factor});
-    background-image: url("/assets/titles/XANGUITO.png");
+    top: -30px;
+    width: calc(#{$xang-size-x});
+    height: calc(#{$xang-size-y});
+    background-image: url("/assets/titles/LETTERS.png");
   }
   &.aventura {
     margin-top: -50px;
@@ -34,18 +35,19 @@ $factor: 1.5;
     background-image: url("/assets/titles/AVENTURA.png");
   }
   &.player {
-    pointer-events: all !important;
     position: absolute;
     top: 20px;
-    left: calc(50% - 540px);
+    left: calc(50% - 500px);
     width: calc(#{$player-size-x} * #{$factor});
     height: calc(#{$player-size-y} * #{$factor});
   }
 }
 .lang-selector {
+  pointer-events: all !important;
+
   position: absolute;
-  top: 20px;
-  right: calc(50% - 520px);
+  top: 25px;
+  right: calc(50% - 490px);
   width: calc(#{$player-size-x} * #{$factor});
   height: calc(#{$player-size-y} * #{$factor});
 }

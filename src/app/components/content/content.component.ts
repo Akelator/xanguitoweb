@@ -1,4 +1,11 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  EventEmitter,
+  OnInit,
+  Output,
+  Renderer2,
+} from '@angular/core';
 
 import { translations } from '../../shared/translations/translations';
 import { LangService } from './../lang/lang.service';
@@ -8,12 +15,22 @@ import { LangService } from './../lang/lang.service';
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.scss'],
 })
-export class ContentComponent {
+export class ContentComponent implements OnInit {
   translations = translations;
 
   @Output() openDemo = new EventEmitter<null>();
   @Output() openScreenshot = new EventEmitter<number>();
-  constructor(private langService: LangService) {}
+  @Output() scroll = new EventEmitter<number>();
+  constructor(
+    private langService: LangService,
+    private render: Renderer2,
+    private el: ElementRef
+  ) {}
+  ngOnInit() {
+    this.render.listen(this.el.nativeElement, 'scroll', () => {
+      this.scroll.emit(this.el.nativeElement.scrollTop);
+    });
+  }
   onOpenDemo(): void {
     this.openDemo.emit();
   }

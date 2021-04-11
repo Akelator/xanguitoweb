@@ -9,6 +9,7 @@ import { WindowComponent } from './components/window/window.component';
 export class AppComponent {
   @ViewChild('window') window?: WindowComponent;
   windowIsOpen = false;
+  scroll: number = 0;
   onOpenScreenshot(index: any): void {
     if (this.window) {
       this.window.screenshot = index;
