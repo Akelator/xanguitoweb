@@ -8,7 +8,7 @@ import { DomSanitizer } from '@angular/platform-browser';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class YoutubeComponent {
-  videoUrl = 'https://www.youtube.com/watch?v=Oe1JuDNpaUM';
+  videoUrl = 'https://www.youtube.com/watch?v=AFuS5lsA6ms';
   constructor(private sanitizer: DomSanitizer) {}
   getVideoIframe(url: string) {
     var video, results;
